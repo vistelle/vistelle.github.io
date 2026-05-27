@@ -1,0 +1,327 @@
+@import url('https://fonts.cdnfonts.com/css/akira-expanded');
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+header {
+    padding: 50px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Akira Expanded', sans-serif;
+}
+
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ccc;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Akira Expanded', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Akira Expanded', sans-serif;
+}
+
+h3 a {
+    font-weight: bold;
+    font-family: 'Akira Expanded', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+p, ul {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    transition: opacity 0.3s ease;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    h1, h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+}
+
+.playlist {
+    padding: 16px;
+    border-top: 2px solid #000;
+
+    margin-top: auto;
+}
+
+.playlist audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.playlist select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    align-items: stretch;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: center;
+
+    height: 100%;
+}
+
+.project-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: contain;
+    background-color: #fff; 
+}
+
+
+.project-card h3 {
+    margin: 16px 0 8px;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.project-card p {
+    margin: 0 16px 16px;
+    font-size: 1em;
+    color: #666;
+}
+
+.top-right-link {
+    position: absolute;
+    top: 58px;
+    right: 45px;
+}
+
+.top-right-link a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.top-right-link a:hover {
+    opacity: 0.7;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    font-family: 'Akira Expanded', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.shorts-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: thin;           /* Firefox */
+    scrollbar-color: #000 #fff;
+}
+
+/* Chrome, Edge, Safari */
+.shorts-row::-webkit-scrollbar {
+    height: 12px;
+}
+
+.shorts-row::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.shorts-row::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+.shorts-row::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+.short-card {
+    flex: 0 0 auto;
+    width: 280px;
+    border: 2px solid #000;
+    padding: 12px;
+    scroll-snap-align: start;
+}
+
+.short-card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    display: block;
+}
+
+.shorts-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.shorts-controls button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shorts-controls button:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 15px;
+        width: 90%;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    #experience div {
+        margin-bottom: 20px;
+    }
+}
